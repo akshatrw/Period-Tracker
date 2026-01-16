@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌸 My Period Tracker</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>🌸 My Period Tracker</h1>
+
+  <div class="input-section">
+    <label>Start Date: <input type="date" id="startDate"></label>
+    <label>End Date: <input type="date" id="endDate"></label>
+    <label>Flow: 
+      <select id="flow">
+        <option value="Light">Light</option>
+        <option value="Medium">Medium</option>
+        <option value="Heavy">Heavy</option>
+      </select>
+    </label>
+    <label>Mood: 
+      <select id="mood">
+        <option value="😊">😊 Happy</option>
+        <option value="😴">😴 Tired</option>
+        <option value="😡">😡 Irritable</option>
+        <option value="😭">😭 Sad</option>
+      </select>
+    </label>
+    <button onclick="addEntry()">Add Cycle</button>
+  </div>
+
+  <h2>Cycle History</h2>
+  <table id="cycleTable">
+    <tr><th>#</th><th>Start</th><th>End</th><th>Flow</th><th>Mood</th><th>Length (days)</th></tr>
+  </table>
+
+  <h2>Prediction 🌟</h2>
+  <p id="predictionText">No prediction yet.</p>
+
+  <h2>Cycle Graph 📊</h2>
+  <canvas id="cycleChart" width="400" height="200"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
